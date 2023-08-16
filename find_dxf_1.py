@@ -39,6 +39,8 @@ def process_files():
         column_name = "Reference_Number"
     elif "Reference number" in df.columns:
         column_name = "Reference number"
+    elif "Reference #" in df.columns: # added the Reference # column name in case it is needed
+        column_name = "Reference #"
     else:
         print("Neither 'Reference #' nor 'Reference number' columns exist in the DataFrame.")
         exit(1)
